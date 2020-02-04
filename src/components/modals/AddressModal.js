@@ -105,7 +105,7 @@ export class AddressModal extends Component<AddressModalProps, AddressModalState
     }
   }
 
-  updateUri = async (uri: string) => {
+  updateUri = (uri: string) => {
     this.setState({
       uri
     })

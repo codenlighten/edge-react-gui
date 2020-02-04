@@ -60,8 +60,8 @@ class SubCategorySelect extends Component<Props, State> {
     const renderAdd = () => {
       if (filterArray.find(item => item === data.item)) {
         return (
-          <View style={[styles.rowPlusWrap]}>
-            <FormattedText style={[styles.rowPlus]}>+</FormattedText>
+          <View style={styles.rowPlusWrap}>
+            <FormattedText style={styles.rowPlus}>+</FormattedText>
           </View>
         )
       }
@@ -69,9 +69,9 @@ class SubCategorySelect extends Component<Props, State> {
 
     return (
       <TouchableHighlight delayPressIn={60} style={styles.rowContainer} underlayColor={THEME.COLORS.GRAY_4} onPress={() => this.props.onPressFxn(data.item)}>
-        <View style={[styles.rowContent]}>
-          <View style={[styles.rowCategoryTextWrap]}>
-            <FormattedText style={[styles.rowCategoryText]} numberOfLines={1}>
+        <View style={styles.rowContent}>
+          <View style={styles.rowCategoryTextWrap}>
+            <FormattedText style={styles.rowCategoryText} numberOfLines={1}>
               {data.item}
             </FormattedText>
           </View>

@@ -82,9 +82,9 @@ export default class Login extends Component<Props, State> {
 
 const styles = StyleSheet.create({
   container: {
+    backgroundColor: THEME.COLORS.PRIMARY,
     flex: 1,
-    position: 'relative',
     paddingTop: StatusBar.currentHeight,
-    backgroundColor: THEME.COLORS.PRIMARY
+    position: 'relative'
   }
 })

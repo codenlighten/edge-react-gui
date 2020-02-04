@@ -68,13 +68,13 @@ class BalanceBox extends PureComponent<BalanceBoxProps, BalanceBoxState> {
 
   balanceBox (fiatBalanceString: string) {
     return (
-      <View style={[styles.totalBalanceBox]}>
-        <View style={[styles.totalBalanceWrap]}>
-          <View style={[styles.totalBalanceHeader]}>
-            <T style={[styles.totalBalanceText]}>{s.strings.fragment_wallets_balance_text}</T>
+      <View style={styles.totalBalanceBox}>
+        <View style={styles.totalBalanceWrap}>
+          <View style={styles.totalBalanceHeader}>
+            <T style={styles.totalBalanceText}>{s.strings.fragment_wallets_balance_text}</T>
           </View>
-          <View style={[styles.currentBalanceBoxDollarsWrap]}>
-            <T style={[styles.currentBalanceBoxDollars]}>{fiatBalanceString}</T>
+          <View style={styles.currentBalanceBoxDollarsWrap}>
+            <T style={styles.currentBalanceBoxDollars}>{fiatBalanceString}</T>
           </View>
         </View>
       </View>
@@ -90,9 +90,9 @@ class BalanceBox extends PureComponent<BalanceBoxProps, BalanceBoxState> {
     }
 
     return (
-      <View style={[styles.totalBalanceBox]}>
-        <View style={[styles.totalBalanceWrap]}>
-          <View style={[styles.hiddenBalanceBoxDollarsWrap]}>
+      <View style={styles.totalBalanceBox}>
+        <View style={styles.totalBalanceWrap}>
+          <View style={styles.hiddenBalanceBoxDollarsWrap}>
             <T numberOfLines={2} style={textType === 'noExchangeRates' ? styles.currentBalanceBoxNoExchangeRates : styles.currentBalanceBoxDollars}>
               {displayedText}
             </T>
@@ -103,16 +103,13 @@ class BalanceBox extends PureComponent<BalanceBoxProps, BalanceBoxState> {
   }
 }
 
-export const WiredBalanceBox = connect(
-  (state: State, ownProps: WiredBalanceBoxOwnProps): BalanceBoxProps => {
-    const isoFiatCurrencyCode = typeof ownProps.isoFiatCurrencyCode === 'function' ? ownProps.isoFiatCurrencyCode(state) : ownProps.isoFiatCurrencyCode
-    return {
-      showBalance: typeof ownProps.showBalance === 'function' ? ownProps.showBalance(state) : ownProps.showBalance,
-      fiatAmount: typeof ownProps.fiatAmount === 'function' ? ownProps.fiatAmount(state, isoFiatCurrencyCode) : ownProps.fiatAmount,
-      onPress: ownProps.onPress,
-      isoFiatCurrencyCode,
-      exchangeRates: ownProps.exchangeRates
-    }
-  },
-  null
-)(BalanceBox)
+export const WiredBalanceBox = connect((state: State, ownProps: WiredBalanceBoxOwnProps): BalanceBoxProps => {
+  const isoFiatCurrencyCode = typeof ownProps.isoFiatCurrencyCode === 'function' ? ownProps.isoFiatCurrencyCode(state) : ownProps.isoFiatCurrencyCode
+  return {
+    showBalance: typeof ownProps.showBalance === 'function' ? ownProps.showBalance(state) : ownProps.showBalance,
+    fiatAmount: typeof ownProps.fiatAmount === 'function' ? ownProps.fiatAmount(state, isoFiatCurrencyCode) : ownProps.fiatAmount,
+    onPress: ownProps.onPress,
+    isoFiatCurrencyCode,
+    exchangeRates: ownProps.exchangeRates
+  }
+}, null)(BalanceBox)

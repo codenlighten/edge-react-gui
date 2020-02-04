@@ -33,7 +33,7 @@ export class Header extends Component<HeaderProps> {
     const { children, style, ...props } = this.props
     return (
       <View style={[styles.header, style]} {...props}>
-        <Gradient reverse style={[styles.gradient]}>
+        <Gradient reverse style={styles.gradient}>
           {children}
         </Gradient>
       </View>

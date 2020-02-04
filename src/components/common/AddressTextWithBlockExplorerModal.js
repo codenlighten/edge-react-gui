@@ -21,6 +21,8 @@ const AddressTextWithBlockExplorerModal = (props: AddressTextWithBlockExplorerMo
   const { address, addressExplorer, children } = props
   const addressModal = async () => {
     if (addressExplorer) {
+      console.log('testing johnny')
+
       const modal = createYesNoModal({
         title: s.strings.modal_addressexplorer_message,
         message: address,

@@ -295,13 +295,11 @@ export const showSendLogsModal = () => async (dispatch: Dispatch, getState: GetS
           name="ios-paper-plane"
           size={24}
           color={colors.primary}
-          style={[
-            {
-              backgroundColor: THEME.COLORS.TRANSPARENT,
-              zIndex: 1015,
-              elevation: 1015
-            }
-          ]}
+          style={{
+            backgroundColor: THEME.COLORS.TRANSPARENT,
+            zIndex: 1015,
+            elevation: 1015
+          }}
         />
       ),
       title: s.strings.settings_button_send_logs,

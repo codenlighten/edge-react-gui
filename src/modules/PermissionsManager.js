@@ -107,7 +107,4 @@ const mapDispatchToProps = (dispatch: Dispatch): PermissionsManagerDispatchProps
     })
 })
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(PermissionsManager)
+export default connect(mapStateToProps, mapDispatchToProps)(PermissionsManager)

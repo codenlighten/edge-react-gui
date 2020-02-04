@@ -210,21 +210,21 @@ export class CreateWalletSelectCrypto extends Component<Props, State> {
     return (
       <View style={[styles.singleCryptoTypeWrap, data.item.value === this.state.selectedWalletType && styles.selectedItem]}>
         <TouchableHighlight
-          style={[styles.singleCryptoType]}
+          style={styles.singleCryptoType}
           onPress={() => this.handleSelectWalletType(data.item)}
           underlayColor={stylesRaw.underlayColor.color}
         >
-          <View style={[styles.cryptoTypeInfoWrap]}>
+          <View style={styles.cryptoTypeInfoWrap}>
             <View style={styles.cryptoTypeLeft}>
-              <View style={[styles.cryptoTypeLogo]}>
+              <View style={styles.cryptoTypeLogo}>
                 {data.item.symbolImageDarkMono ? (
                   <Image source={{ uri: data.item.symbolImageDarkMono }} style={[styles.cryptoTypeLogo, { borderRadius: 20 }]} />
                 ) : (
                   <View style={styles.cryptoTypeLogo} />
                 )}
               </View>
-              <View style={[styles.cryptoTypeLeftTextWrap]}>
-                <Text style={[styles.cryptoTypeName]}>
+              <View style={styles.cryptoTypeLeftTextWrap}>
+                <Text style={styles.cryptoTypeName}>
                   {data.item.label} - {data.item.currencyCode}
                 </Text>
               </View>

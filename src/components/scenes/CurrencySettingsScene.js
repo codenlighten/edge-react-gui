@@ -49,8 +49,8 @@ export default class CurrencySettings extends Component<Props, State> {
 
   header (title: string) {
     return (
-      <Gradient style={[styles.headerRow]}>
-        <View style={[styles.headerTextWrap]}>
+      <Gradient style={styles.headerRow}>
+        <View style={styles.headerTextWrap}>
           <View style={styles.leftArea}>
             <T style={styles.headerText}>{SETTINGS_DENOMINATION_TEXT}</T>
           </View>
@@ -61,8 +61,8 @@ export default class CurrencySettings extends Component<Props, State> {
 
   subHeader (title: string) {
     return (
-      <Gradient style={[styles.headerRow]}>
-        <View style={[styles.headerTextWrap]}>
+      <Gradient style={styles.headerRow}>
+        <View style={styles.headerTextWrap}>
           <View style={styles.leftArea}>
             <T style={styles.headerText}>{title}</T>
           </View>

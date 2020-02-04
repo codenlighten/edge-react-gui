@@ -81,7 +81,7 @@ export class CreateWalletImportComponent extends Component<CreateWalletImportPro
               <Text style={styles.instructionalText}>{s.strings.create_wallet_import_instructions}</Text>
             </View>
             <FormField
-              style={[{ flex: 1, height: 150 }]}
+              style={{ flex: 1, height: 150 }}
               autoFocus
               clearButtonMode={'while-editing'}
               autoCorrect={false}
@@ -95,7 +95,7 @@ export class CreateWalletImportComponent extends Component<CreateWalletImportPro
               error={error}
             />
             <View style={styles.buttons}>
-              <PrimaryButton style={[styles.next]} onPress={this.onNext} disabled={isProcessing}>
+              <PrimaryButton style={styles.next} onPress={this.onNext} disabled={isProcessing}>
                 {isProcessing ? <ActivityIndicator /> : <PrimaryButton.Text>{s.strings.string_next_capitalized}</PrimaryButton.Text>}
               </PrimaryButton>
             </View>

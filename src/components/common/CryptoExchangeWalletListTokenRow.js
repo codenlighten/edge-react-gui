@@ -55,12 +55,12 @@ class CryptoExchangeWalletListTokenRowConnected extends Component<Props, LocalSt
           </View>
           <View style={styles.walletDetailsContainer}>
             <View style={styles.walletDetailsRow}>
-              <FormattedText style={[styles.walletDetailsRowCurrency]}>{this.props.currencyCode}</FormattedText>
-              <FormattedText style={[styles.walletDetailsRowValue]}>{cryptoBalance}</FormattedText>
+              <FormattedText style={styles.walletDetailsRowCurrency}>{this.props.currencyCode}</FormattedText>
+              <FormattedText style={styles.walletDetailsRowValue}>{cryptoBalance}</FormattedText>
             </View>
             <View style={styles.walletDetailsRow}>
-              <FormattedText style={[styles.walletDetailsRowName]}>{this.props.name}</FormattedText>
-              <FormattedText style={[styles.walletDetailsRowFiat]}>
+              <FormattedText style={styles.walletDetailsRowName}>{this.props.name}</FormattedText>
+              <FormattedText style={styles.walletDetailsRowFiat}>
                 {this.props.fiatSymbol} {this.props.fiatBalance}
               </FormattedText>
             </View>
@@ -80,9 +80,6 @@ const mapStateToProps = (state: State, ownProps): StateProps => {
   }
 }
 
-const CryptoExchangeWalletListTokenRow = connect(
-  mapStateToProps,
-  null
-)(CryptoExchangeWalletListTokenRowConnected)
+const CryptoExchangeWalletListTokenRow = connect(mapStateToProps, null)(CryptoExchangeWalletListTokenRowConnected)
 
 export { CryptoExchangeWalletListTokenRow }

@@ -16,7 +16,4 @@ const mapStateToProps = (state: State, ownProps: CurrencySettingsTitleOwnProps) 
 const mapDispatchToProps = () => {
   return {}
 }
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(CurrencySettingsTitle)
+export default connect(mapStateToProps, mapDispatchToProps)(CurrencySettingsTitle)

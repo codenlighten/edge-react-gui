@@ -117,7 +117,4 @@ const mapDispatchToProps = (dispatch: Dispatch): DeepLinkingManagerDispatchProps
   }
 }
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(DeepLinkingManager)
+export default connect(mapStateToProps, mapDispatchToProps)(DeepLinkingManager)

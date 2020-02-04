@@ -173,39 +173,39 @@ class FullWalletListRowLoadedComponent extends Component<FullWalletListRowLoaded
     }
 
     return (
-      <View style={[{ width: '100%' }]}>
+      <View style={{ width: '100%' }}>
         <View>
           <TouchableHighlight
-            style={[styles.rowContainer]}
+            style={styles.rowContainer}
             underlayColor={styleRaw.walletRowUnderlay.color}
             onPress={() => this._onPressSelectWallet(id, currencyCode, walletData.receiveAddress.publicAddress)}
           >
-            <View style={[styles.rowContent]}>
+            <View style={styles.rowContent}>
               <View style={styles.rowIconWrap}>
-                {symbolImageDarkMono && <Image style={[styles.rowCurrencyLogoAndroid]} source={{ uri: symbolImageDarkMono }} resizeMode="cover" />}
+                {symbolImageDarkMono && <Image style={styles.rowCurrencyLogoAndroid} source={{ uri: symbolImageDarkMono }} resizeMode="cover" />}
                 <View style={styles.rowCurrencyLogoAndroid}>
                   <ProgressPie size={styles.rowCurrencyOverlaySize} color={'rgba(255, 255, 255, 0.75)'} progress={progress} />
                 </View>
               </View>
               <View style={styles.walletDetailsContainer}>
                 <View style={styles.walletDetailsRow}>
-                  <T style={[styles.walletDetailsRowCurrency]}>{currencyCode}</T>
-                  <T style={[styles.walletDetailsRowValue]}>{finalCryptoAmountString}</T>
+                  <T style={styles.walletDetailsRowCurrency}>{currencyCode}</T>
+                  <T style={styles.walletDetailsRowValue}>{finalCryptoAmountString}</T>
                 </View>
                 <View style={styles.walletDetailsRow}>
-                  <T style={[styles.walletDetailsRowName]}>{name}</T>
+                  <T style={styles.walletDetailsRowName}>{name}</T>
                   <View style={styles.walletDetailsFiatBalanceRow}>
-                    <T style={[styles.walletDetailsRowFiat]}>{fiatBalanceSymbol}</T>
-                    <T style={[styles.walletDetailsRowFiat]}>{fiatBalanceString}</T>
+                    <T style={styles.walletDetailsRowFiat}>{fiatBalanceSymbol}</T>
+                    <T style={styles.walletDetailsRowFiat}>{fiatBalanceString}</T>
                   </View>
                 </View>
                 <View style={styles.walletDetailsRowLine} />
                 <View style={styles.walletDetailsRow}>
                   <View style={styles.walletDetailsExchangeRow}>
-                    <T style={[styles.walletDetailsRowExchangeRate]}>{exchangeRateFiatSymbol}</T>
-                    <T style={[styles.walletDetailsRowExchangeRate]}>{exchangeRateString}</T>
+                    <T style={styles.walletDetailsRowExchangeRate}>{exchangeRateFiatSymbol}</T>
+                    <T style={styles.walletDetailsRowExchangeRate}>{exchangeRateString}</T>
                   </View>
-                  <T style={[differencePercentageStringStyle]}>{differencePercentageString}</T>
+                  <T style={differencePercentageStringStyle}>{differencePercentageString}</T>
                 </View>
               </View>
               <View style={styles.rowOptionsWrap}>
@@ -289,17 +289,14 @@ const mapDispatchToProps = dispatch => ({
   getEnabledTokensList: (walletId: string) => dispatch(getEnabledTokens(walletId))
 })
 
-const FullWalletListRowConnected = connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(FullWalletListRowLoadedComponent)
+const FullWalletListRowConnected = connect(mapStateToProps, mapDispatchToProps)(FullWalletListRowLoadedComponent)
 
 class FullListRowEmptyData extends Component<any> {
   render () {
     return (
       <TouchableHighlight style={[styles.rowContainer, styles.emptyRow]} underlayColor={styleRaw.emptyRowUnderlay.color}>
-        <View style={[styles.rowContent]}>
-          <View style={[styles.rowNameTextWrap]}>
+        <View style={styles.rowContent}>
+          <View style={styles.rowNameTextWrap}>
             <ActivityIndicator style={{ height: 18, width: 18 }} />
           </View>
         </View>

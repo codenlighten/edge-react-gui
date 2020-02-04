@@ -18,7 +18,4 @@ const mapDispatchToProps = (dispatch: Dispatch): CreateWalletReviewDispatchProps
     dispatch(createCurrencyWallet(walletName, walletType, fiatCurrencyCode, isScenePop, false, importText))
 })
 
-export const CreateWalletReview = connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(CreateWalletReviewConnector)
+export const CreateWalletReview = connect(mapStateToProps, mapDispatchToProps)(CreateWalletReviewConnector)

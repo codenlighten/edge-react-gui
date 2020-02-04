@@ -109,8 +109,8 @@ export default class ManageTokens extends Component<ManageTokensProps, State> {
           <View style={styles.instructionalArea}>
             <Text style={styles.instructionalText}>{s.strings.managetokens_top_instructions}</Text>
           </View>
-          <View style={[styles.metaTokenListArea]}>
-            <View style={[styles.metaTokenListWrap]}>
+          <View style={styles.metaTokenListArea}>
+            <View style={styles.metaTokenListWrap}>
               <FlatList
                 keyExtractor={item => item.currencyCode}
                 data={sortedTokenInfo}
@@ -124,22 +124,22 @@ export default class ManageTokens extends Component<ManageTokensProps, State> {
                     metaTokens={this.props.guiWallet.metaTokens}
                   />
                 )}
-                style={[styles.tokenList]}
+                style={styles.tokenList}
               />
             </View>
             {specialCurrencyInfo.isCustomTokensSupported ? (
-              <View style={[styles.buttonsArea]}>
-                <PrimaryButton style={[styles.saveButton]} onPress={this.saveEnabledTokenList}>
-                  {manageTokensPending ? <ActivityIndicator /> : <PrimaryButton.Text style={[styles.buttonText]}>{s.strings.string_save}</PrimaryButton.Text>}
+              <View style={styles.buttonsArea}>
+                <PrimaryButton style={styles.saveButton} onPress={this.saveEnabledTokenList}>
+                  {manageTokensPending ? <ActivityIndicator /> : <PrimaryButton.Text style={styles.buttonText}>{s.strings.string_save}</PrimaryButton.Text>}
                 </PrimaryButton>
-                <SecondaryButton style={[styles.addButton]} onPress={this.goToAddTokenScene}>
-                  <SecondaryButton.Text style={[styles.buttonText]}>{s.strings.addtoken_add}</SecondaryButton.Text>
+                <SecondaryButton style={styles.addButton} onPress={this.goToAddTokenScene}>
+                  <SecondaryButton.Text style={styles.buttonText}>{s.strings.addtoken_add}</SecondaryButton.Text>
                 </SecondaryButton>
               </View>
             ) : (
-              <View style={[styles.buttonsArea]}>
-                <PrimaryButton style={[styles.oneButton]} onPress={this.saveEnabledTokenList}>
-                  {manageTokensPending ? <ActivityIndicator /> : <PrimaryButton.Text style={[styles.buttonText]}>{s.strings.string_save}</PrimaryButton.Text>}
+              <View style={styles.buttonsArea}>
+                <PrimaryButton style={styles.oneButton} onPress={this.saveEnabledTokenList}>
+                  {manageTokensPending ? <ActivityIndicator /> : <PrimaryButton.Text style={styles.buttonText}>{s.strings.string_save}</PrimaryButton.Text>}
                 </PrimaryButton>
               </View>
             )}

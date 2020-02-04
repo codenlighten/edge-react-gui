@@ -48,7 +48,4 @@ const mapDispatchToProps = (dispatch: Dispatch, state: State) => ({
   toggleAccountBalanceVisibility: () => dispatch(toggleAccountBalanceVisibility())
 })
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(WalletList)
+export default connect(mapStateToProps, mapDispatchToProps)(WalletList)

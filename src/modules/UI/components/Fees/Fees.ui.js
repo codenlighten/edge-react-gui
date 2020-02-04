@@ -6,15 +6,15 @@ import { StyleSheet, Text, View } from 'react-native'
 import * as s from '../../../../locales/strings.js'
 
 const styles = StyleSheet.create({
-  view: {
-    alignItems: 'center',
-    justifyContent: 'center'
-  },
   feesInCrypto: {
     alignItems: 'center',
     justifyContent: 'center'
   },
   secondaryFee: {
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
+  view: {
     alignItems: 'center',
     justifyContent: 'center'
   }

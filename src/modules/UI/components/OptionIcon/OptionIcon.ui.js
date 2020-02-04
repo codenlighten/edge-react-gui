@@ -17,13 +17,11 @@ export default class OptionIcon extends Component<Props> {
         name={this.props.iconName}
         size={scale(24)}
         color={THEME.COLORS.PRIMARY}
-        style={[
-          {
-            backgroundColor: THEME.COLORS.TRANSPARENT,
-            zIndex: 1015,
-            elevation: 1015
-          }
-        ]}
+        style={{
+          backgroundColor: THEME.COLORS.TRANSPARENT,
+          zIndex: 1015,
+          elevation: 1015
+        }}
       />
     )
   }

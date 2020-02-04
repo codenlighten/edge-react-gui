@@ -16,12 +16,12 @@ type Props = {
 export default class RowRoute extends Component<Props> {
   render () {
     return (
-      <TouchableHighlight style={[styles.settingsRowContainer]} underlayColor={styleRaw.underlay.color} disabled={false} onPress={this.props.routeFunction}>
-        <View style={[styles.settingsRowTextRow]}>
-          <View style={[styles.settingsRowLeftContainer]}>
+      <TouchableHighlight style={styles.settingsRowContainer} underlayColor={styleRaw.underlay.color} disabled={false} onPress={this.props.routeFunction}>
+        <View style={styles.settingsRowTextRow}>
+          <View style={styles.settingsRowLeftContainer}>
             <T style={[styles.settingsRowLeftText, this.props.disabled ? styles.settingsRowLeftTextDisabled : null]}>{this.props.leftText}</T>
           </View>
-          <T style={[styles.routeRowRightText]}>{this.props.right}</T>
+          <T style={styles.routeRowRightText}>{this.props.right}</T>
         </View>
       </TouchableHighlight>
     )

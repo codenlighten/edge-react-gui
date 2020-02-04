@@ -31,21 +31,21 @@ class ContactSearchResults extends Component {
     return (
       <View style={styles.singleContactWrap}>
         <TouchableHighlight
-          style={[styles.singleContact]}
+          style={styles.singleContact}
           onPress={() => this.props.onSelectPayee(fullName, data.item.thumbnailPath)}
           underlayColor={styles.underlayColor.color}
         >
-          <View style={[styles.contactInfoWrap]}>
+          <View style={styles.contactInfoWrap}>
             <View style={styles.contactLeft}>
-              <View style={[styles.contactLogo]}>
+              <View style={styles.contactLogo}>
                 {data.item.thumbnailPath ? (
                   <Image source={{ uri: data.item.thumbnailPath }} style={{ height: scale(40), width: scale(40), borderRadius: 20 }} />
                 ) : (
                   <Image source={ContactImage} style={{ height: scale(40), width: scale(40), borderRadius: 20 }} />
                 )}
               </View>
-              <View style={[styles.contactLeftTextWrap]}>
-                <FormattedText style={[styles.contactName]}>{fullName}</FormattedText>
+              <View style={styles.contactLeftTextWrap}>
+                <FormattedText style={styles.contactName}>{fullName}</FormattedText>
               </View>
             </View>
           </View>

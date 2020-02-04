@@ -17,16 +17,16 @@ export default class TwoButtonsComponent extends Component<Props> {
     const { onDone, onCancel } = this.props
 
     return (
-      <View style={[styles.buttonsWrap]}>
+      <View style={styles.buttonsWrap}>
         <TouchableHighlight style={[styles.cancelButtonWrap, styles.stylizedButton]} underlayColor={styleRaw.cancelUnderlay.color} onPress={onCancel}>
           <View style={styles.stylizedButtonTextWrap}>
-            <FormattedText style={[styles.stylizedButtonText]}>{this.props.cancelText}</FormattedText>
+            <FormattedText style={styles.stylizedButtonText}>{this.props.cancelText}</FormattedText>
           </View>
         </TouchableHighlight>
 
         <TouchableHighlight style={[styles.doneButtonWrap, styles.stylizedButton]} underlayColor={styleRaw.doneUnderlay.color} onPress={onDone}>
           <View style={styles.stylizedButtonTextWrap}>
-            <FormattedText style={[styles.stylizedButtonText]}>{this.props.doneText}</FormattedText>
+            <FormattedText style={styles.stylizedButtonText}>{this.props.doneText}</FormattedText>
           </View>
         </TouchableHighlight>
       </View>

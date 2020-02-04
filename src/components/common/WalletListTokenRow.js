@@ -95,32 +95,32 @@ export class WalletListTokenRow extends PureComponent<Props> {
         onPress={this.selectWallet}
         {...this.props.sortHandlers}
       >
-        <View style={[styles.rowContent]}>
+        <View style={styles.rowContent}>
           <View style={styles.rowIconWrap}>
-            {symbolImage && <Image style={[styles.rowCurrencyLogoAndroid]} source={{ uri: symbolImage }} resizeMode="cover" />}
+            {symbolImage && <Image style={styles.rowCurrencyLogoAndroid} source={{ uri: symbolImage }} resizeMode="cover" />}
             <View style={styles.rowCurrencyLogoAndroid}>
               <ProgressPie size={styles.rowCurrencyOverlaySize} color={'rgba(255, 255, 255, 0.75)'} progress={progress} />
             </View>
           </View>
           <View style={styles.walletDetailsContainer}>
             <View style={styles.walletDetailsRow}>
-              <T style={[styles.walletDetailsRowCurrency]}>{currencyCode}</T>
-              <T style={[styles.walletDetailsRowValue]}>{cryptoAmountString}</T>
+              <T style={styles.walletDetailsRowCurrency}>{currencyCode}</T>
+              <T style={styles.walletDetailsRowValue}>{cryptoAmountString}</T>
             </View>
             <View style={styles.walletDetailsRow}>
-              <T style={[styles.walletDetailsRowName]}>{name}</T>
+              <T style={styles.walletDetailsRowName}>{name}</T>
               <View style={styles.walletDetailsFiatBalanceRow}>
-                <T style={[styles.walletDetailsRowFiat]}>{fiatBalanceSymbol}</T>
-                <T style={[styles.walletDetailsRowFiat]}>{fiatBalanceString}</T>
+                <T style={styles.walletDetailsRowFiat}>{fiatBalanceSymbol}</T>
+                <T style={styles.walletDetailsRowFiat}>{fiatBalanceString}</T>
               </View>
             </View>
             <View style={styles.walletDetailsRowLine} />
             <View style={styles.walletDetailsRow}>
               <View style={styles.walletDetailsExchangeRow}>
-                <T style={[styles.walletDetailsRowExchangeRate]}>{exchangeRateFiatSymbol}</T>
-                <T style={[styles.walletDetailsRowExchangeRate]}>{exchangeRateString}</T>
+                <T style={styles.walletDetailsRowExchangeRate}>{exchangeRateFiatSymbol}</T>
+                <T style={styles.walletDetailsRowExchangeRate}>{exchangeRateString}</T>
               </View>
-              <T style={[differencePercentageStringStyle]}>{differencePercentageString}</T>
+              <T style={differencePercentageStringStyle}>{differencePercentageString}</T>
             </View>
           </View>
           <View style={styles.rowOptionsWrap} />

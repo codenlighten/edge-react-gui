@@ -47,14 +47,14 @@ export class CountrySelectionModal extends Component<CountrySelectionModalProps,
 
     return (
       <View style={[styles.singleCountryWrap, data.item['alpha-2'] === countryCode && styles.selectedItem]}>
-        <TouchableHighlight style={[styles.singleCountry]} onPress={() => bridge.resolve(data.item['alpha-2'])} underlayColor={styles.underlayColor.color}>
-          <View style={[styles.countryInfoWrap]}>
+        <TouchableHighlight style={styles.singleCountry} onPress={() => bridge.resolve(data.item['alpha-2'])} underlayColor={styles.underlayColor.color}>
+          <View style={styles.countryInfoWrap}>
             <View style={styles.countryLeft}>
-              <View style={[styles.countryLogo]}>
+              <View style={styles.countryLogo}>
                 <Image source={{ uri: logoUrl }} style={{ height: scale(40), width: scale(40), borderRadius: 20 }} />
               </View>
-              <View style={[styles.countryLeftTextWrap]}>
-                <FormattedText style={[styles.countryName]}>{data.item.name}</FormattedText>
+              <View style={styles.countryLeftTextWrap}>
+                <FormattedText style={styles.countryName}>{data.item.name}</FormattedText>
               </View>
             </View>
           </View>

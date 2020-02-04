@@ -11,7 +11,6 @@ import { intl } from '../locales/intl.js'
 import { convertCurrency } from '../modules/UI/selectors.js'
 import type { State } from '../types/reduxTypes.js'
 import type { CustomTokenInfo, ExchangeData, GuiDenomination, GuiWallet } from '../types/types.js'
-
 export const DIVIDE_PRECISION = 18
 
 export const cutOffText = (str: string, lng: number) => {
@@ -486,7 +485,7 @@ export type RequestPaymentAddress = {
   callbackDomain: string
 }
 
-export const getRequestForAddress = (data: string): RequestPaymentAddress => {
+export const getRequestForAddress = async (data: string): Promise<RequestPaymentAddress> => {
   const parsedUrl = parse(data, {}, true)
   if (typeof parsedUrl.protocol !== 'string') throw new Error('InvalidRequestForAddress')
   if (typeof parsedUrl.pathname !== 'string') throw new Error('InvalidRequestForAddress')
@@ -519,6 +518,23 @@ export const getRequestForAddress = (data: string): RequestPaymentAddress => {
   const parsedCallbackUrl = parse(callbackUrl)
   const callbackDomain = parsedCallbackUrl.host
   return { sourceName, currencyName, callbackUrl, callbackDomain }
+}
+
+export const debounce = (func: any, wait: number, immediate: boolean) => {
+  let timeout
+
+  return () => {
+    const context = this
+    const args = arguments
+    const later = () => {
+      timeout = null
+      if (!immediate) func.apply(context, args)
+    }
+    const callNow = immediate && !timeout
+    if (timeout) clearTimeout(timeout)
+    timeout = setTimeout(later, wait)
+    if (callNow) func.apply(context, args)
+  }
 }
 
 export const getTotalFiatAmountFromExchangeRates = (state: State, isoFiatCurrencyCode: string) => {

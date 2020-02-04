@@ -95,11 +95,11 @@ export default class DefaultFiatSetting extends Component<Props, State> {
   renderFiatTypeResult = (data: FlatListItem) => {
     return (
       <View style={[styles.singleFiatTypeWrap, data.item.value === this.state.selectedFiat && styles.selectedItem]}>
-        <TouchableHighlight style={[styles.singleFiatType]} onPress={() => this.onSelectFiat(data.item)} underlayColor={stylesRaw.underlayColor.color}>
-          <View style={[styles.fiatTypeInfoWrap]}>
+        <TouchableHighlight style={styles.singleFiatType} onPress={() => this.onSelectFiat(data.item)} underlayColor={stylesRaw.underlayColor.color}>
+          <View style={styles.fiatTypeInfoWrap}>
             <View style={styles.fiatTypeLeft}>
-              <View style={[styles.fiatTypeLeftTextWrap]}>
-                <Text style={[styles.fiatTypeName]}>{data.item.label}</Text>
+              <View style={styles.fiatTypeLeftTextWrap}>
+                <Text style={styles.fiatTypeName}>{data.item.label}</Text>
               </View>
             </View>
           </View>

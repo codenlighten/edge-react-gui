@@ -109,7 +109,4 @@ const mapDispatchToProps = (dispatch: Dispatch): EdgeWalletCallbackManagerDispat
   }
 }
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(EdgeWalletCallbackManager)
+export default connect(mapStateToProps, mapDispatchToProps)(EdgeWalletCallbackManager)

@@ -173,14 +173,14 @@ class CryptoExchangeWalletListRow extends Component<Props, LocalState> {
             </View>
             <View style={styles.walletDetailsContainer}>
               <View style={styles.walletDetailsRow}>
-                <FormattedText style={[styles.walletDetailsRowCurrency]}>{wallet.currencyCode}</FormattedText>
-                <FormattedText style={[styles.walletDetailsRowValue]}>
+                <FormattedText style={styles.walletDetailsRowCurrency}>{wallet.currencyCode}</FormattedText>
+                <FormattedText style={styles.walletDetailsRowValue}>
                   {this.state.cryptoSymbol} {this.state.cryptoBalance}
                 </FormattedText>
               </View>
               <View style={styles.walletDetailsRow}>
-                <FormattedText style={[styles.walletDetailsRowName]}>{wallet.name}</FormattedText>
-                <FormattedText style={[styles.walletDetailsRowFiat]}>
+                <FormattedText style={styles.walletDetailsRowName}>{wallet.name}</FormattedText>
+                <FormattedText style={styles.walletDetailsRowFiat}>
                   {this.state.fiatSymbol} {this.state.fiatBalance}
                 </FormattedText>
               </View>

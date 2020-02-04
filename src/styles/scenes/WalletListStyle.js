@@ -479,10 +479,10 @@ export const customWalletListOptionsStyles = StyleSheet.create({
     top: 6
   },
   menuIconWrap: {
-    width: scale(46),
-    height: '100%',
     alignItems: 'center',
-    justifyContent: 'flex-start'
+    height: '100%',
+    justifyContent: 'flex-start',
+    width: scale(46)
   }
 })
 

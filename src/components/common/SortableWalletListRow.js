@@ -57,8 +57,8 @@ class SortableWalletListRow extends Component<Props, State> {
         {...this.props.sortHandlers}
       >
         {walletData.currencyCode ? (
-          <View style={[styles.rowContent]}>
-            <View style={[styles.rowDragArea]}>
+          <View style={styles.rowContent}>
+            <View style={styles.rowDragArea}>
               <Image source={sort} style={styles.rowDragIcon} />
             </View>
             <View style={styles.rowIconWrap}>
@@ -72,21 +72,21 @@ class SortableWalletListRow extends Component<Props, State> {
             </View>
             <View style={styles.walletDetailsContainer}>
               <View style={styles.walletDetailsRow}>
-                <T style={[styles.walletDetailsRowCurrency]}>{currencyCode}</T>
-                <T style={[styles.walletDetailsRowValue]}>{finalCryptoAmountString}</T>
+                <T style={styles.walletDetailsRowCurrency}>{currencyCode}</T>
+                <T style={styles.walletDetailsRowValue}>{finalCryptoAmountString}</T>
               </View>
               <View style={styles.walletDetailsRow}>
-                <T style={[styles.walletDetailsRowName]}>{name}</T>
+                <T style={styles.walletDetailsRowName}>{name}</T>
                 <View style={styles.walletDetailsFiatBalanceRow}>
-                  <T style={[styles.walletDetailsRowFiat]}>{fiatBalanceSymbol}</T>
-                  <T style={[styles.walletDetailsRowFiat]}>{fiatBalanceString}</T>
+                  <T style={styles.walletDetailsRowFiat}>{fiatBalanceSymbol}</T>
+                  <T style={styles.walletDetailsRowFiat}>{fiatBalanceString}</T>
                 </View>
               </View>
             </View>
           </View>
         ) : (
-          <View style={[styles.rowContent]}>
-            <View style={[styles.rowNameTextWrap]}>
+          <View style={styles.rowContent}>
+            <View style={styles.rowNameTextWrap}>
               <ActivityIndicator style={{ height: 18, width: 18 }} />
             </View>
           </View>

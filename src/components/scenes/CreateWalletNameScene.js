@@ -80,11 +80,11 @@ export class CreateWalletName extends Component<Props, State> {
               onNext={this.onNext}
             />
             <View style={styles.buttons}>
-              <SecondaryButton style={[styles.back]} onPress={this.onBack}>
+              <SecondaryButton style={styles.back} onPress={this.onBack}>
                 <SecondaryButton.Text>{s.strings.title_back}</SecondaryButton.Text>
               </SecondaryButton>
 
-              <PrimaryButton style={[styles.next]} onPress={this.onNext}>
+              <PrimaryButton style={styles.next} onPress={this.onNext}>
                 <PrimaryButton.Text>{s.strings.string_next_capitalized}</PrimaryButton.Text>
               </PrimaryButton>
             </View>

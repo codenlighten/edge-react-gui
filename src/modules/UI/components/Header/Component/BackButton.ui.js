@@ -28,7 +28,7 @@ export default class BackButton extends Component<Props> {
     return (
       <TouchableOpacity style={styles.backButton} onPress={this.props.onPress}>
         {withArrow && <Icon size={22} name={icon} type={Constants.ION_ICONS} style={[styles.backIconStyle, !isIos && styles.backIconAndroid]} />}
-        {withArrow && !isIos ? null : <T style={[styles.sideText]}>{this.props.label}</T>}
+        {withArrow && !isIos ? null : <T style={styles.sideText}>{this.props.label}</T>}
       </TouchableOpacity>
     )
   }

@@ -103,13 +103,11 @@ export default class SendLogsModal extends Component {
         name="ios-paper-plane"
         size={24}
         color={colors.primary}
-        style={[
-          {
-            backgroundColor: THEME.COLORS.TRANSPARENT,
-            zIndex: 1015,
-            elevation: 1015
-          }
-        ]}
+        style={{
+          backgroundColor: THEME.COLORS.TRANSPARENT,
+          zIndex: 1015,
+          elevation: 1015
+        }}
       />
     )
 

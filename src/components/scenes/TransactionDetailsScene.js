@@ -237,7 +237,7 @@ export class TransactionDetails extends Component<TransactionDetailsProps, State
       .replace(/,/g, '')
       .replace(/x/, ',')
     const newInputFiltered =
-      (isNaN(newInputStripped.replace(',', '.')) && (newInputStripped !== ',' && newInputStripped !== '.')) || newInputStripped === '' ? '' : newInputStripped
+      (isNaN(newInputStripped.replace(',', '.')) && newInputStripped !== ',' && newInputStripped !== '.') || newInputStripped === '' ? '' : newInputStripped
     this.setState({
       amountFiat: newInputFiltered
     })

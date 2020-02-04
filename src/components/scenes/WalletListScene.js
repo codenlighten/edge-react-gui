@@ -167,11 +167,11 @@ export default class WalletList extends Component<Props, State> {
             onPress={this.props.toggleAccountBalanceVisibility}
             exchangeRates={this.props.exchangeRates}
           />
-          <View style={[styles.walletsBox]}>
-            <Gradient style={[styles.walletsBoxHeaderWrap]}>
-              <View style={[styles.walletsBoxHeaderTextWrap]}>
+          <View style={styles.walletsBox}>
+            <Gradient style={styles.walletsBoxHeaderWrap}>
+              <View style={styles.walletsBoxHeaderTextWrap}>
                 <View style={styles.leftArea}>
-                  <Image source={WalletIcon} style={[styles.walletIcon]} />
+                  <Image source={WalletIcon} style={styles.walletIcon} />
                   <T style={styles.walletsBoxHeaderText}>{WALLETS_HEADER_TEXT}</T>
                 </View>
               </View>
@@ -187,8 +187,8 @@ export default class WalletList extends Component<Props, State> {
                       }
                     ]}
                   >
-                    <TouchableOpacity style={[styles.walletsBoxDoneTextWrap]} onPress={this.disableSorting}>
-                      <T style={[styles.walletsBoxDoneText]}>{DONE_TEXT}</T>
+                    <TouchableOpacity style={styles.walletsBoxDoneTextWrap} onPress={this.disableSorting}>
+                      <T style={styles.walletsBoxDoneText}>{DONE_TEXT}</T>
                     </TouchableOpacity>
                   </Animated.View>
                 )}
@@ -203,8 +203,8 @@ export default class WalletList extends Component<Props, State> {
                     ]}
                   >
                     <View style={styles.plusSpacer} />
-                    <TouchableOpacity style={[styles.walletsBoxHeaderAddWallet]} onPress={Actions[Constants.CREATE_WALLET_SELECT_CRYPTO]}>
-                      <Ionicon name="md-add" style={[styles.dropdownIcon]} size={28} color="white" />
+                    <TouchableOpacity style={styles.walletsBoxHeaderAddWallet} onPress={Actions[Constants.CREATE_WALLET_SELECT_CRYPTO]}>
+                      <Ionicon name="md-add" style={styles.dropdownIcon} size={28} color="white" />
                     </TouchableOpacity>
                   </Animated.View>
                 )}

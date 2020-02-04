@@ -29,15 +29,15 @@ export default class RowSwitch extends Component {
   render () {
     return (
       <TouchableHighlight
-        style={[styles.settingsRowContainer]}
+        style={styles.settingsRowContainer}
         underlayColor={styleRaw.underlay.color}
         disabled={false}
         onPress={() => this._onPressToggleSetting(this.props.property)}
       >
-        <View style={[styles.settingsRowTextRow]}>
-          <View style={[styles.settingsRowLeftContainer]}>
+        <View style={styles.settingsRowTextRow}>
+          <View style={styles.settingsRowLeftContainer}>
             {this.props.logo}
-            <T style={[styles.settingsRowLeftTextWithoutWidth]}>{this.props.leftText}</T>
+            <T style={styles.settingsRowLeftTextWithoutWidth}>{this.props.leftText}</T>
           </View>
           <Switch onValueChange={() => this._onPressToggleSetting(this.props.property)} value={this.props.value} />
         </View>

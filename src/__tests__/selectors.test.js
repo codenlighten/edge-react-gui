@@ -9,7 +9,10 @@ import * as UI_SELECTORS from '../modules/UI/selectors.js'
 describe('getSupportedWalletTypes', function () {
   describe('when multiple supported wallet types', function () {
     test('[plugins] => [supportedWalletTypes]', function () {
-      const allCurrencyInfos = [{ displayName: 'Bitcoin', walletType: 'wallet:bitcoin' }, { displayName: 'Ethereum', walletType: 'wallet:ethereum' }]
+      const allCurrencyInfos = [
+        { displayName: 'Bitcoin', walletType: 'wallet:bitcoin' },
+        { displayName: 'Ethereum', walletType: 'wallet:ethereum' }
+      ]
       const state = {
         ui: {
           settings: {
@@ -19,7 +22,10 @@ describe('getSupportedWalletTypes', function () {
           }
         }
       }
-      const expected = [{ label: 'Bitcoin', value: 'wallet:bitcoin' }, { label: 'Ethereum', value: 'wallet:ethereum' }]
+      const expected = [
+        { label: 'Bitcoin', value: 'wallet:bitcoin' },
+        { label: 'Ethereum', value: 'wallet:ethereum' }
+      ]
       const actual = SETTINGS_SELECTORS.getSupportedWalletTypes(state)
       expect(actual).toEqual(expected)
     })

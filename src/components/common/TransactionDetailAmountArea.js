@@ -130,31 +130,31 @@ class AmountArea extends Component {
     if (!notes) notes = ''
     const categoryInfo = this.props.categories[this.props.category]
     return (
-      <View style={[styles.amountAreaContainer]}>
-        <View style={[styles.amountAreaCryptoRow]}>
-          <View style={[styles.amountAreaLeft]}>
+      <View style={styles.amountAreaContainer}>
+        <View style={styles.amountAreaCryptoRow}>
+          <View style={styles.amountAreaLeft}>
             <FormattedText style={[styles.amountAreaLeftText, { color: leftData.color }]}>
               {s.strings['fragment_transaction_' + this.props.direction + '_past']}
             </FormattedText>
           </View>
-          <View style={[styles.amountAreaMiddle]}>
+          <View style={styles.amountAreaMiddle}>
             <View style={[styles.amountAreaMiddleTop, { flexDirection: 'row' }]}>
               <FormattedText style={[styles.amountAreaMiddleTopText, styles.symbol]}>{symbolString}</FormattedText>
               <FormattedText style={[styles.amountAreaMiddleTopText, styles.symbol]}>{amountString}</FormattedText>
             </View>
-            <View style={[styles.amountAreaMiddleBottom]}>
-              <FormattedText style={[styles.amountAreaMiddleBottomText]}>{feeSyntax}</FormattedText>
+            <View style={styles.amountAreaMiddleBottom}>
+              <FormattedText style={styles.amountAreaMiddleBottomText}>{feeSyntax}</FormattedText>
             </View>
           </View>
-          <View style={[styles.amountAreaRight]}>
-            <FormattedText style={[styles.amountAreaRightText]}>{this.props.cryptoCurrencyCode}</FormattedText>
+          <View style={styles.amountAreaRight}>
+            <FormattedText style={styles.amountAreaRightText}>{this.props.cryptoCurrencyCode}</FormattedText>
           </View>
         </View>
-        <View style={[styles.editableFiatRow]}>
-          <View style={[styles.editableFiatLeft]}>
-            <FormattedText style={[styles.editableFiatLeftText]} />
+        <View style={styles.editableFiatRow}>
+          <View style={styles.editableFiatLeft}>
+            <FormattedText style={styles.editableFiatLeftText} />
           </View>
-          <View style={[styles.editableFiatArea]}>
+          <View style={styles.editableFiatArea}>
             <FormattedText style={styles.fiatSymbol}>{this.props.fiatCurrencySymbol}</FormattedText>
             <TextInput
               underlineColorAndroid={'transparent'}
@@ -172,11 +172,11 @@ class AmountArea extends Component {
               blurOnSubmit={true}
             />
           </View>
-          <View style={[styles.editableFiatRight]}>
-            <FormattedText style={[styles.editableFiatRightText]}>{this.props.fiatCurrencyCode}</FormattedText>
+          <View style={styles.editableFiatRight}>
+            <FormattedText style={styles.editableFiatRightText}>{this.props.fiatCurrencyCode}</FormattedText>
           </View>
         </View>
-        <View style={[styles.categoryRow]}>
+        <View style={styles.categoryRow}>
           <TouchableOpacity
             style={[styles.categoryLeft, { borderColor: this.props.color }]}
             onPress={this.onEnterCategories}
@@ -184,7 +184,7 @@ class AmountArea extends Component {
           >
             <FormattedText style={[{ color: this.props.color }, styles.categoryLeftText]}>{categoryInfo.syntax}</FormattedText>
           </TouchableOpacity>
-          <View style={[styles.categoryInputArea]}>
+          <View style={styles.categoryInputArea}>
             <TextInput
               underlineColorAndroid={'transparent'}
               blurOnSubmit
@@ -200,15 +200,15 @@ class AmountArea extends Component {
             />
           </View>
         </View>
-        <View style={[styles.notesRow]}>
+        <View style={styles.notesRow}>
           <TouchableWithoutFeedback onPress={() => this.amountInput.focus()}>
-            <View style={[styles.notesInputWrap]}>
+            <View style={styles.notesInputWrap}>
               <TextInput
                 underlineColorAndroid={'transparent'}
                 onChangeText={this.props.onChangeNotesFxn}
                 multiline
                 defaultValue={notes}
-                style={[styles.notesInput]}
+                style={styles.notesInput}
                 placeholderTextColor={THEME.COLORS.GRAY_}
                 placeholder={s.strings.transaction_details_notes_title}
                 autoCapitalize="sentences"
@@ -223,15 +223,15 @@ class AmountArea extends Component {
             </View>
           </TouchableWithoutFeedback>
         </View>
-        <View style={[styles.footerArea]}>
-          <View style={[styles.buttonArea]}>
-            <PrimaryButton style={[styles.saveButton]} onPress={this.props.onPressFxn}>
+        <View style={styles.footerArea}>
+          <View style={styles.buttonArea}>
+            <PrimaryButton style={styles.saveButton} onPress={this.props.onPressFxn}>
               <PrimaryButton.Text>{s.strings.string_save}</PrimaryButton.Text>
             </PrimaryButton>
           </View>
           {this.props.txExplorerUrl ? (
-            <TouchableWithoutFeedback onPress={this.props.onPressAdvancedDetailsButton} style={[styles.advancedTxArea]}>
-              <FormattedText style={[styles.advancedTxText]}>{s.strings.transaction_details_view_advanced_data}</FormattedText>
+            <TouchableWithoutFeedback onPress={this.props.onPressAdvancedDetailsButton} style={styles.advancedTxArea}>
+              <FormattedText style={styles.advancedTxText}>{s.strings.transaction_details_view_advanced_data}</FormattedText>
             </TouchableWithoutFeedback>
           ) : null}
         </View>

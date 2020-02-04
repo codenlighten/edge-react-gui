@@ -5,28 +5,28 @@ import { StyleSheet } from 'react-native'
 import { THEME } from '../../../../theme/variables/airbitz.js'
 
 export const styles = StyleSheet.create({
-  icon: {
-    color: THEME.COLORS.SECONDARY,
-    position: 'relative',
-    alignItems: 'center',
-    textAlign: 'center',
-    justifyContent: 'center',
-    backgroundColor: THEME.COLORS.TRANSPARENT,
-    fontSize: 40
-  },
-  descriptionTop: {
-    paddingBottom: 15
+  buttonContainer: {
+    paddingVertical: 3
   },
   descriptionBottom: {
     paddingTop: 15
   },
-  passwordInput: {
-    color: THEME.COLORS.GRAY_2
+  descriptionTop: {
+    paddingBottom: 15
   },
   footer: {
     paddingTop: 10
   },
-  buttonContainer: {
-    paddingVertical: 3
+  icon: {
+    alignItems: 'center',
+    backgroundColor: THEME.COLORS.TRANSPARENT,
+    color: THEME.COLORS.SECONDARY,
+    fontSize: 40,
+    justifyContent: 'center',
+    position: 'relative',
+    textAlign: 'center'
+  },
+  passwordInput: {
+    color: THEME.COLORS.GRAY_2
   }
 })

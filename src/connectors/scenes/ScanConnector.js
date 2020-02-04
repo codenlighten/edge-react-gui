@@ -26,7 +26,4 @@ const mapDispatchToProps = (dispatch: Dispatch) => ({
     })
 })
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Scan)
+export default connect(mapStateToProps, mapDispatchToProps)(Scan)

@@ -16,7 +16,7 @@ export default class HelpButton extends Component<Props> {
   render () {
     return (
       <TouchableOpacity style={styles.sideTextWrap} onPress={() => showHelpModal()}>
-        <T style={[styles.sideText]}>{HELP_TEXT}</T>
+        <T style={styles.sideText}>{HELP_TEXT}</T>
       </TouchableOpacity>
     )
   }

@@ -20,9 +20,6 @@ export const mapDispatchToProps = (dispatch: Dispatch): DispatchProps => ({
   }
 })
 
-const HeaderWalletSelectorConnector = connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(HeaderWalletSelector)
+const HeaderWalletSelectorConnector = connect(mapStateToProps, mapDispatchToProps)(HeaderWalletSelector)
 
 export { HeaderWalletSelectorConnector }

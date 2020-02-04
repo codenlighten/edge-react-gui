@@ -17,7 +17,4 @@ const mapStateToProps = (state: State): CreateWalletSelectFiatStateProps => {
   return out
 }
 const mapDispatchToProps = () => ({})
-export const CreateWalletSelectFiat = connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(CreateWalletSelectFiatComponent)
+export const CreateWalletSelectFiat = connect(mapStateToProps, mapDispatchToProps)(CreateWalletSelectFiatComponent)

@@ -211,7 +211,4 @@ class PluginView extends React.Component<Props> {
 const mapStateToProps = state => ({ state })
 const mapDispatchToProps = dispatch => ({ dispatch })
 
-export const PluginViewConnect = connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(PluginView)
+export const PluginViewConnect = connect(mapStateToProps, mapDispatchToProps)(PluginView)

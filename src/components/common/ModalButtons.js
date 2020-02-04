@@ -21,15 +21,15 @@ export default class ModalButtons extends Component<ModalButtonsOwnProps> {
     const { onDone, onCancel, doneButtonActivityFlag } = this.props
     let doneButtonContent
     if (!doneButtonActivityFlag) {
-      doneButtonContent = <FormattedText style={[styles.stylizedButtonText]}>{DONE_TEXT}</FormattedText>
+      doneButtonContent = <FormattedText style={styles.stylizedButtonText}>{DONE_TEXT}</FormattedText>
     } else {
       doneButtonContent = <ActivityIndicator />
     }
     return (
-      <View style={[styles.buttonsWrap]}>
+      <View style={styles.buttonsWrap}>
         <TouchableHighlight style={[styles.cancelButtonWrap, styles.stylizedButton]} underlayColor={styleRaw.cancelUnderlay.color} onPress={onCancel}>
           <View style={styles.stylizedButtonTextWrap}>
-            <FormattedText style={[styles.stylizedButtonText]}>{CANCEL_TEXT}</FormattedText>
+            <FormattedText style={styles.stylizedButtonText}>{CANCEL_TEXT}</FormattedText>
           </View>
         </TouchableHighlight>
 

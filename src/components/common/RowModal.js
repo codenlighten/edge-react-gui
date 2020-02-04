@@ -26,7 +26,7 @@ export default class RowModal extends Component<Props> {
   render () {
     return (
       <TouchableHighlight
-        style={[styles.settingsRowContainer]}
+        style={styles.settingsRowContainer}
         disabled={this.props.disabled || false}
         underlayColor={styleRaw.underlay.color}
         onPress={this.props.onPress}

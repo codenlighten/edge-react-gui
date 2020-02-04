@@ -78,7 +78,4 @@ const mapDispatchToProps = (dispatch: Dispatch): EdgeAccountCallbackManagerDispa
   }
 }
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(EdgeAccountCallbackManager)
+export default connect(mapStateToProps, mapDispatchToProps)(EdgeAccountCallbackManager)

@@ -41,7 +41,4 @@ const mapDispatchToProps = (dispatch: Dispatch, ownProps) => {
     saveCustomNodesList: (nodesList: Array<string>) => dispatch(saveCustomNodesList(ownProps.currencyCode, nodesList))
   }
 }
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(CurrencySettings)
+export default connect(mapStateToProps, mapDispatchToProps)(CurrencySettings)

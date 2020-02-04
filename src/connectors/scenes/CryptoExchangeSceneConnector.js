@@ -102,9 +102,6 @@ export const mapDispatchToProps = (dispatch: Dispatch): CryptoExchangeSceneCompo
   }
 })
 
-const CryptoExchangeSceneConnector = connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(CryptoExchangeScene)
+const CryptoExchangeSceneConnector = connect(mapStateToProps, mapDispatchToProps)(CryptoExchangeScene)
 
 export { CryptoExchangeSceneConnector }

@@ -33,10 +33,10 @@ export default class WalletNameInput extends Component<Props, State> {
 
   render () {
     return (
-      <View style={[styles.nameInputWrap]}>
+      <View style={styles.nameInputWrap}>
         <FormField
           autoCapitalize="words"
-          style={[styles.nameInput]}
+          style={styles.nameInput}
           onChangeText={this._onNameInputChange}
           value={this.state.currentWalletNameInput}
           label={this.props.label}

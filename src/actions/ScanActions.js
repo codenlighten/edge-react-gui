@@ -93,7 +93,7 @@ const doRequestAddress = (dispatch: Dispatch, edgeWallet: EdgeCurrencyWallet, gu
   }
 }
 
-export const parseScannedUri = (data: string) => (dispatch: Dispatch, getState: GetState) => {
+export const parseScannedUri = (data: string) => async (dispatch: Dispatch, getState: GetState) => {
   if (!data) return
   const state = getState()
   const selectedWalletId = state.ui.wallets.selectedWalletId
@@ -107,9 +107,8 @@ export const parseScannedUri = (data: string) => (dispatch: Dispatch, getState: 
     Actions[EDGE_LOGIN]()
     return
   }
-
   try {
-    const requestAddress: RequestPaymentAddress = getRequestForAddress(data)
+    const requestAddress: RequestPaymentAddress = await getRequestForAddress(data)
     return doRequestAddress(dispatch, edgeWallet, guiWallet, requestAddress)
   } catch (e) {
     console.log(e)

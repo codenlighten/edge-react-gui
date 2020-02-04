@@ -91,9 +91,9 @@ export default class EditToken extends Component<EditTokenComponentProps, State>
                 <Text style={styles.instructionalText}>{s.strings.edittoken_top_instructions}</Text>
               </View>
               <View style={styles.formArea}>
-                <View style={[styles.nameArea]}>
+                <View style={styles.nameArea}>
                   <FormField
-                    style={[styles.currencyName]}
+                    style={styles.currencyName}
                     value={this.state.currencyName}
                     onChangeText={this.onChangeName}
                     autoCapitalize={'words'}
@@ -102,9 +102,9 @@ export default class EditToken extends Component<EditTokenComponentProps, State>
                     autoCorrect={false}
                   />
                 </View>
-                <View style={[styles.currencyCodeArea]}>
+                <View style={styles.currencyCodeArea}>
                   <FormField
-                    style={[styles.currencyCodeInput]}
+                    style={styles.currencyCodeInput}
                     value={this.state.currencyCode}
                     onChangeText={this.onChangeCurrencyCode}
                     autoCapitalize={'characters'}
@@ -114,9 +114,9 @@ export default class EditToken extends Component<EditTokenComponentProps, State>
                     maxLength={MAX_TOKEN_CODE_CHARACTERS}
                   />
                 </View>
-                <View style={[styles.contractAddressArea]}>
+                <View style={styles.contractAddressArea}>
                   <FormField
-                    style={[styles.contractAddressInput]}
+                    style={styles.contractAddressInput}
                     value={this.state.contractAddress}
                     onChangeText={this.onChangeContractAddress}
                     label={s.strings.addtoken_contract_address_input_text}
@@ -124,9 +124,9 @@ export default class EditToken extends Component<EditTokenComponentProps, State>
                     autoCorrect={false}
                   />
                 </View>
-                <View style={[styles.decimalPlacesArea]}>
+                <View style={styles.decimalPlacesArea}>
                   <FormField
-                    style={[styles.decimalPlacesInput]}
+                    style={styles.decimalPlacesInput}
                     value={this.state.decimalPlaces}
                     onChangeText={this.onChangeDecimalPlaces}
                     label={s.strings.addtoken_denomination_input_text}
@@ -138,11 +138,11 @@ export default class EditToken extends Component<EditTokenComponentProps, State>
               <View style={styles.errorMessageArea}>
                 <Text style={styles.errorMessageText}>{this.state.errorMessage}</Text>
               </View>
-              <View style={[styles.buttonsArea]}>
-                <TertiaryButton onPress={this.props.showDeleteTokenModal} style={[styles.deleteButton]}>
+              <View style={styles.buttonsArea}>
+                <TertiaryButton onPress={this.props.showDeleteTokenModal} style={styles.deleteButton}>
                   <TertiaryButton.Text>{s.strings.edittoken_delete_token}</TertiaryButton.Text>
                 </TertiaryButton>
-                <PrimaryButton style={[styles.saveButton]} onPress={this._onSave}>
+                <PrimaryButton style={styles.saveButton} onPress={this._onSave}>
                   {editCustomTokenProcessing ? <ActivityIndicator /> : <PrimaryButton.Text>{s.strings.string_save}</PrimaryButton.Text>}
                 </PrimaryButton>
               </View>

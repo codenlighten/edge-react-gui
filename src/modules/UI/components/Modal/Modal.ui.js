@@ -34,14 +34,14 @@ export default class StylizedModal extends Component<Props> {
     const exitIconName = (Platform.OS === 'ios' ? 'ios' : 'md') + '-close'
     if (this.props.onExitButtonFxn) {
       return (
-        <View style={[styles.exitRow]}>
+        <View style={styles.exitRow}>
           <TouchableOpacity style={styles.exitButton} onPress={this.props.onExitButtonFxn}>
             <Ionicon name={exitIconName} size={scale(30)} color={exitColor} />
           </TouchableOpacity>
         </View>
       )
     }
-    return <View style={[styles.exitRowEmpty]} />
+    return <View style={styles.exitRowEmpty} />
   }
   render () {
     const { headerText, headerSubtext } = this.props
@@ -59,10 +59,10 @@ export default class StylizedModal extends Component<Props> {
           <View style={[styles.modalBox, this.props.modalBoxStyle]}>
             <View style={[styles.modalContent, this.props.modalContentStyle]}>
               <View style={[styles.modalBody, this.props.modalBodyStyle]}>
-                <View style={[styles.modalTopTextWrap]}>
+                <View style={styles.modalTopTextWrap}>
                   <T style={[styles.modalTopText, this.props.headerTextStyle]}>{headerText}</T>
 
-                  {this.props.headerSubtext && <T style={[styles.modalTopSubtext]}>{headerSubtext ? s.strings[headerSubtext] : ''}</T>}
+                  {this.props.headerSubtext && <T style={styles.modalTopSubtext}>{headerSubtext ? s.strings[headerSubtext] : ''}</T>}
                 </View>
 
                 {this.props.modalMiddle && <View style={[styles.modalMiddle, this.props.modalMiddleStyle]}>{this.props.modalMiddle}</View>}

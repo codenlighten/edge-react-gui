@@ -193,7 +193,7 @@ export class TransactionRowComponent extends Component<Props, State> {
       }
     }
     const out = (
-      <View style={[styles.singleTransactionWrap]}>
+      <View style={styles.singleTransactionWrap}>
         {(tx.key === 0 || tx.dateString !== completedTxList[tx.key - 1].dateString) && (
           <View style={styles.singleDateArea}>
             <View style={styles.leftDateArea}>
@@ -206,28 +206,28 @@ export class TransactionRowComponent extends Component<Props, State> {
           underlayColor={styleRaw.transactionUnderlay.color}
           style={[styles.singleTransaction, { borderBottomWidth: lastOfDate ? 0 : 1 }]}
         >
-          <View style={[styles.transactionInfoWrap]}>
+          <View style={styles.transactionInfoWrap}>
             <View style={styles.transactionLeft}>
-              <View style={[styles.transactionLeftLogoWrap]}>
+              <View style={styles.transactionLeftLogoWrap}>
                 {thumbnailPath ? (
-                  <Image style={[styles.transactionLogo]} source={{ uri: thumbnailPath }} />
+                  <Image style={styles.transactionLogo} source={{ uri: thumbnailPath }} />
                 ) : (
                   <Image style={styles.transactionLogo} source={txImage} />
                 )}
               </View>
             </View>
 
-            <View style={[styles.transactionRight]}>
+            <View style={styles.transactionRight}>
               <View style={[styles.transactionDetailsRow, transactionCategory ? styles.transactionDetailsRowMargin : null]}>
-                <T style={[styles.transactionPartner]} adjustsFontSizeToFit={true} minimumFontScale={0.6}>
+                <T style={styles.transactionPartner} adjustsFontSizeToFit={true} minimumFontScale={0.6}>
                   {transactionPartner}
                 </T>
                 {transactionAmountString()}
               </View>
               {formattedTransactionCategory ? (
-                <View style={[styles.transactionDetailsRow]}>
-                  <T style={[styles.transactionCategory]}>{formattedTransactionCategory}</T>
-                  <T style={[styles.transactionFiat]}>{`${fiatSymbol} ${fiatAmountString}`}</T>
+                <View style={styles.transactionDetailsRow}>
+                  <T style={styles.transactionCategory}>{formattedTransactionCategory}</T>
+                  <T style={styles.transactionFiat}>{`${fiatSymbol} ${fiatAmountString}`}</T>
                 </View>
               ) : null}
               {formattedTransactionCategory ? (
@@ -236,9 +236,9 @@ export class TransactionRowComponent extends Component<Props, State> {
                 </View>
               ) : null}
               {!formattedTransactionCategory ? (
-                <View style={[styles.transactionDetailsRow]}>
+                <View style={styles.transactionDetailsRow}>
                   <T style={[styles.transactionPendingTime, pendingTimeStyle]}>{pendingTimeSyntax}</T>
-                  <T style={[styles.transactionFiat]}>{`${fiatSymbol} ${fiatAmountString}`}</T>
+                  <T style={styles.transactionFiat}>{`${fiatSymbol} ${fiatAmountString}`}</T>
                 </View>
               ) : null}
             </View>

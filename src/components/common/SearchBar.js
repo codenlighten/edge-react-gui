@@ -19,11 +19,11 @@ export default class SearchBar extends Component {
 
   render () {
     return (
-      <View style={[styles.searchContainer]}>
-        <View style={[styles.innerSearch]}>
-          <EvilIcons style={[styles.searchIcon]} name="search" size={20} />
+      <View style={styles.searchContainer}>
+        <View style={styles.innerSearch}>
+          <EvilIcons style={styles.searchIcon} name="search" size={20} />
           <TextInput
-            style={[styles.searchInput]}
+            style={styles.searchInput}
             onChangeText={this.props.onSearchChange}
             onBlur={this.props.onBlur}
             onFocus={this.props.onFocus}
@@ -32,7 +32,7 @@ export default class SearchBar extends Component {
         </View>
 
         <Animated.View style={{ width: this.state.animation, opacity: this.state.op }}>
-          <TouchableHighlight style={[styles.cancelButton]} onPress={this.props.onPress}>
+          <TouchableHighlight style={styles.cancelButton} onPress={this.props.onPress}>
             <Text style={styles.cancelButtonText}>{CANCEL_TEXT}</Text>
           </TouchableHighlight>
         </Animated.View>

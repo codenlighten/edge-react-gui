@@ -25,14 +25,14 @@ class RowWithButton extends Component<Props> {
 
   render () {
     return (
-      <TouchableHighlight style={[styles.settingsRowContainer]} underlayColor={styleRaw.underlay.color} disabled={false} onPress={() => this.onPress()}>
-        <View style={[styles.settingsRowTextRow]}>
-          <View style={[styles.settingsRowLeftContainer]}>
+      <TouchableHighlight style={styles.settingsRowContainer} underlayColor={styleRaw.underlay.color} disabled={false} onPress={() => this.onPress()}>
+        <View style={styles.settingsRowTextRow}>
+          <View style={styles.settingsRowLeftContainer}>
             <Image resizeMode={'contain'} style={styles.settingsRowLeftLogo} source={this.props.logo} />
-            <T style={[styles.settingsRowLeftTextWithoutWidth]}>{this.props.leftText}</T>
+            <T style={styles.settingsRowLeftTextWithoutWidth}>{this.props.leftText}</T>
           </View>
           <View style={styles.settingsRowRightContainer}>
-            <T style={[styles.routeRowRightText]}>{this.props.rightText}</T>
+            <T style={styles.routeRowRightText}>{this.props.rightText}</T>
           </View>
         </View>
       </TouchableHighlight>

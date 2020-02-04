@@ -77,7 +77,7 @@ export default class SendConfirmationOptions extends Component<Props> {
             {!!getSpecialCurrencyInfo(currencyCode).uniqueIdentifier && (
               <MenuOption value={ADD_UNIQUE_IDENTIFIER} style={defaultMenuStyle.menuOption}>
                 <View style={defaultMenuStyle.menuOptionItem}>
-                  <Text style={[defaultMenuStyle.optionText]}>{getSpecialCurrencyInfo(currencyCode).uniqueIdentifier.addButtonText}</Text>
+                  <Text style={defaultMenuStyle.optionText}>{getSpecialCurrencyInfo(currencyCode).uniqueIdentifier.addButtonText}</Text>
                 </View>
               </MenuOption>
             )}

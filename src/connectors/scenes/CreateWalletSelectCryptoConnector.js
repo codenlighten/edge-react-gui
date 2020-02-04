@@ -23,7 +23,4 @@ const mapStateToProps = (state: State): CreateWalletSelectCryptoStateProps => {
 }
 const mapDispatchToProps = (dispatch: Dispatch) => ({})
 
-export const CreateWalletSelectCrypto = connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(CreateWalletSelectCryptoComponent)
+export const CreateWalletSelectCrypto = connect(mapStateToProps, mapDispatchToProps)(CreateWalletSelectCryptoComponent)

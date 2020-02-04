@@ -24,11 +24,11 @@ export function PayeeIcon (props: Props) {
 const styles = StyleSheet.create({
   payeeIcon: {
     alignSelf: 'center',
-    position: 'absolute',
-    top: scale(-24),
     backgroundColor: THEME.COLORS.WHITE,
     borderRadius: scale(24),
     height: scale(48),
+    position: 'absolute',
+    top: scale(-24),
     width: scale(48)
   }
 })

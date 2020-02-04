@@ -196,24 +196,24 @@ export class TransactionList extends Component<Props, State> {
     }
     return (
       <TouchableOpacity onPress={this.props.toggleBalanceVisibility} style={styles.touchableBalanceBox} activeOpacity={BALANCE_BOX_OPACITY}>
-        <Gradient style={[styles.currentBalanceBox]}>
+        <Gradient style={styles.currentBalanceBox}>
           <View style={styles.balanceBoxContents}>
             {!isBalanceVisible ? (
-              <View style={[styles.totalBalanceWrap]}>
-                <View style={[styles.hiddenBalanceBoxDollarsWrap]}>
-                  <T style={[styles.currentBalanceBoxHiddenText]}>{SHOW_BALANCE_TEXT}</T>
+              <View style={styles.totalBalanceWrap}>
+                <View style={styles.hiddenBalanceBoxDollarsWrap}>
+                  <T style={styles.currentBalanceBoxHiddenText}>{SHOW_BALANCE_TEXT}</T>
                 </View>
               </View>
             ) : (
               <View style={styles.balanceShownContainer}>
-                <View style={[styles.iconWrap]}>
+                <View style={styles.iconWrap}>
                   {logo ? (
-                    <Image style={[{ height: '100%' }]} source={{ uri: logo }} resizeMode={'cover'} />
+                    <Image style={{ height: '100%' }} source={{ uri: logo }} resizeMode={'cover'} />
                   ) : (
-                    <T style={[styles.request]}>{displayDenomination.symbol}</T>
+                    <T style={styles.request}>{displayDenomination.symbol}</T>
                   )}
                 </View>
-                <View style={[styles.currentBalanceBoxBitsWrap]}>
+                <View style={styles.currentBalanceBoxBitsWrap}>
                   <View style={{ flexDirection: 'row' }}>
                     {displayDenomination.symbol ? (
                       <View style={{ flexDirection: 'row' }}>
@@ -237,22 +237,22 @@ export class TransactionList extends Component<Props, State> {
                     )}
                   </View>
                 </View>
-                <View style={[styles.currentBalanceBoxDollarsWrap]}>
-                  <T numberOfLines={1} style={[styles.currentBalanceBoxDollars]}>
+                <View style={styles.currentBalanceBoxDollarsWrap}>
+                  <T numberOfLines={1} style={styles.currentBalanceBoxDollars}>
                     {fiatBalanceString}
                   </T>
                 </View>
               </View>
             )}
-            <View style={[styles.requestSendRow]}>
+            <View style={styles.requestSendRow}>
               <TouchableHighlight style={[styles.requestBox, styles.button]} underlayColor={styleRaw.underlay.color} onPress={Actions.request}>
-                <View style={[styles.requestWrap]}>
+                <View style={styles.requestWrap}>
                   <Image style={{ width: 25, height: 25 }} source={requestImage} />
-                  <T style={[styles.request]}>{REQUEST_TEXT}</T>
+                  <T style={styles.request}>{REQUEST_TEXT}</T>
                 </View>
               </TouchableHighlight>
               <TouchableHighlight style={[styles.sendBox, styles.button]} underlayColor={styleRaw.underlay.color} onPress={Actions.scan}>
-                <View style={[styles.sendWrap]}>
+                <View style={styles.sendWrap}>
                   <Image style={{ width: 25, height: 25 }} source={sendImage} />
                   <T style={styles.send}>{SEND_TEXT}</T>
                 </View>

@@ -17,7 +17,7 @@ export default class DeleteTokenButtons extends Component<DeleteTokenButtonsProp
   render () {
     const { processingFlag } = this.props
     return (
-      <View style={[styles.deleteModalButtonsArea]}>
+      <View style={styles.deleteModalButtonsArea}>
         <SecondaryButton onPress={this.props.onPressCancel} style={[styles.modalCancelButton, styles.button]}>
           <SecondaryButton.Text>{s.strings.string_cancel_cap}</SecondaryButton.Text>
         </SecondaryButton>

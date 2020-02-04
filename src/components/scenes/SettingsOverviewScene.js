@@ -162,10 +162,10 @@ export default class SettingsOverview extends Component<Props, State> {
     return (
       <SceneWrapper background="body" hasTabs={false}>
         <ScrollView style={styles.container}>
-          <Gradient style={[styles.unlockRow]}>
-            <View style={[styles.accountBoxHeaderTextWrap]}>
+          <Gradient style={styles.unlockRow}>
+            <View style={styles.accountBoxHeaderTextWrap}>
               <View style={styles.leftArea}>
-                <Icon type={Constants.FONT_AWESOME} style={[styles.icon]} name={Constants.USER_O} />
+                <Icon type={Constants.FONT_AWESOME} style={styles.icon} name={Constants.USER_O} />
                 <T style={styles.accountBoxHeaderText}>
                   {s.strings.settings_account_title_cap}: {this.props.username}
                 </T>
@@ -203,10 +203,10 @@ export default class SettingsOverview extends Component<Props, State> {
             right={<Icon type={Constants.SIMPLE_ICONS} style={styles.settingsRowRightArrow} name={Constants.ARROW_RIGHT} />}
           />
 
-          <Gradient style={[styles.unlockRow]}>
-            <View style={[styles.accountBoxHeaderTextWrap]}>
+          <Gradient style={styles.unlockRow}>
+            <View style={styles.accountBoxHeaderTextWrap}>
               <View style={styles.leftArea}>
-                <Icon type={Constants.ION_ICONS} name="ios-options" style={[styles.icon]} />
+                <Icon type={Constants.ION_ICONS} name="ios-options" style={styles.icon} />
                 <T style={styles.accountBoxHeaderText}>{s.strings.settings_options_title_cap}</T>
               </View>
             </View>
@@ -260,7 +260,7 @@ export default class SettingsOverview extends Component<Props, State> {
               routeFunction={Actions[Constants.TERMS_OF_SERVICE]}
             />
 
-            <View style={[styles.debugArea]}>
+            <View style={styles.debugArea}>
               <PrimaryButton onPress={this.showSendLogsModal}>
                 <PrimaryButton.Text>{s.strings.settings_button_send_logs}</PrimaryButton.Text>
               </PrimaryButton>

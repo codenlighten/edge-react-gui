@@ -21,7 +21,4 @@ const mapDispatchToProps = (dispatch: Dispatch, ownProps) => {
   return {}
 }
 
-export const CreateWalletImportConnector = connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(CreateWalletImportComponent)
+export const CreateWalletImportConnector = connect(mapStateToProps, mapDispatchToProps)(CreateWalletImportComponent)

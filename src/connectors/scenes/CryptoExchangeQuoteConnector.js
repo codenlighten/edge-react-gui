@@ -38,9 +38,6 @@ export const mapDispatchToProps = (dispatch: Dispatch): DispatchProps => ({
   }
 })
 
-const CryptoExchangeQuoteConnector = connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(CryptoExchangeQuoteScreenComponent)
+const CryptoExchangeQuoteConnector = connect(mapStateToProps, mapDispatchToProps)(CryptoExchangeQuoteScreenComponent)
 
 export { CryptoExchangeQuoteConnector }

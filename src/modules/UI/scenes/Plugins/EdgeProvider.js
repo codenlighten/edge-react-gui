@@ -200,11 +200,9 @@ export class EdgeProvider extends Bridgeable {
           icon: <Icon type={MATERIAL_COMMUNITY} name={EXCLAMATION} size={30} />,
           buttonText: s.strings.string_ok
         })
-        return launchModal(modal).then(
-          (response): Promise<string> => {
-            throw new Error(s.strings.user_closed_modal_no_wallet)
-          }
-        )
+        return launchModal(modal).then((response): Promise<string> => {
+          throw new Error(s.strings.user_closed_modal_no_wallet)
+        })
       }
     }
     throw new Error(s.strings.user_closed_modal_no_wallet)

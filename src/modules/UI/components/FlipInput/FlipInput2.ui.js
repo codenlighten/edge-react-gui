@@ -299,11 +299,11 @@ export class FlipInput extends Component<Props, State> {
     return (
       <TouchableWithoutFeedback onPress={this.textInputFrontFocus}>
         <View style={top.row} key={'top'}>
-          <Text style={[top.currencyCode]}>{fieldInfo.currencyCode}</Text>
-          <View style={[top.amountContainer]}>
-            <Text style={[top.symbol]}>{fieldInfo.currencySymbol}</Text>
+          <Text style={top.currencyCode}>{fieldInfo.currencyCode}</Text>
+          <View style={top.amountContainer}>
+            <Text style={top.symbol}>{fieldInfo.currencySymbol}</Text>
             <TextInput
-              style={[top.amount]}
+              style={top.amount}
               placeholder={'0'}
               placeholderTextColor={'rgba(255, 255, 255, 0.60)'}
               value={amount}
@@ -347,11 +347,11 @@ export class FlipInput extends Component<Props, State> {
     return (
       <TouchableWithoutFeedback onPress={this.textInputBackFocus}>
         <View style={top.row} key={'top'}>
-          <Text style={[top.currencyCode]}>{fieldInfo.currencyName}</Text>
-          <View style={[top.amountContainer]}>
-            <Text style={[top.symbol]}>{fieldInfo.currencySymbol}</Text>
+          <Text style={top.currencyCode}>{fieldInfo.currencyName}</Text>
+          <View style={top.amountContainer}>
+            <Text style={top.symbol}>{fieldInfo.currencySymbol}</Text>
             <TextInput
-              style={[top.amount]}
+              style={top.amount}
               placeholder={this.props.isFiatOnTop ? 'Amount' : '0'}
               placeholderTextColor={'rgba(255, 255, 255, 0.60)'}
               value={amount}
@@ -377,9 +377,9 @@ export class FlipInput extends Component<Props, State> {
     return (
       <TouchableWithoutFeedback onPress={this.onToggleFlipInput} key={'bottom'}>
         <View style={bottom.row}>
-          <Text style={[bottom.currencyCode]}>{fieldInfo.currencyCode}</Text>
-          <View style={[top.amountContainer]}>
-            <Text style={[bottom.symbol]}>{fieldInfo.currencySymbol}</Text>
+          <Text style={bottom.currencyCode}>{fieldInfo.currencyCode}</Text>
+          <View style={top.amountContainer}>
+            <Text style={bottom.symbol}>{fieldInfo.currencySymbol}</Text>
             <Text style={[bottom.amount, !amount && bottom.alert]} numberOfLines={1} ellipsizeMode="tail">
               {amount || '0'}
             </Text>
@@ -399,13 +399,13 @@ export class FlipInput extends Component<Props, State> {
       transform: [{ rotateX: this.backInterpolate }]
     }
     return (
-      <View style={[styles.container]}>
+      <View style={styles.container}>
         <TouchableWithoutFeedback onPress={headerCallback}>
           <View style={styles.flipContainerHeader}>
             {headerLogo && <Image style={styles.flipContainerHeaderIcon} source={{ uri: headerLogo }} />}
             <View style={styles.flipContainerHeaderTextContainer}>
               <Text style={styles.flipContainerHeaderText}>{headerText}</Text>
-              {headerCallback && <FAIcon style={[styles.flipContainerHeaderTextDropDown]} name={Constants.KEYBOARD_ARROW_DOWN} size={scale(20)} />}
+              {headerCallback && <FAIcon style={styles.flipContainerHeaderTextDropDown} name={Constants.KEYBOARD_ARROW_DOWN} size={scale(20)} />}
             </View>
           </View>
         </TouchableWithoutFeedback>
@@ -415,9 +415,9 @@ export class FlipInput extends Component<Props, State> {
             pointerEvents={isToggled ? 'none' : 'auto'}
           >
             <View style={styles.flipButton}>
-              <FAIcon style={[styles.flipIcon]} onPress={this.onToggleFlipInput} name={Constants.SWAP_VERT} size={scale(26)} />
+              <FAIcon style={styles.flipIcon} onPress={this.onToggleFlipInput} name={Constants.SWAP_VERT} size={scale(26)} />
             </View>
-            <View style={[styles.rows]}>
+            <View style={styles.rows}>
               {this.topRowFront(primaryInfo, this.onPrimaryAmountChange, this.state.primaryDisplayAmount)}
               {this.bottomRow(secondaryInfo, this.state.secondaryDisplayAmount)}
             </View>
@@ -427,9 +427,9 @@ export class FlipInput extends Component<Props, State> {
             pointerEvents={isToggled ? 'auto' : 'none'}
           >
             <View style={styles.flipButton}>
-              <FAIcon style={[styles.flipIcon]} onPress={this.onToggleFlipInput} name={Constants.SWAP_VERT} size={scale(26)} />
+              <FAIcon style={styles.flipIcon} onPress={this.onToggleFlipInput} name={Constants.SWAP_VERT} size={scale(26)} />
             </View>
-            <View style={[styles.rows]}>
+            <View style={styles.rows}>
               {this.topRowBack(secondaryInfo, this.onSecondaryAmountChange, this.state.secondaryDisplayAmount)}
               {this.bottomRow(primaryInfo, this.state.primaryDisplayAmount)}
             </View>

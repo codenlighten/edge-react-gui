@@ -91,7 +91,10 @@ export class EdgeCoreManager extends PureComponent<Props, State> {
       console.log('EdgeContext closed')
       this.setState({ context: null })
     })
-    this.setState(state => ({ context, counter: state.counter + 1 }), () => this.hideSplash())
+    this.setState(
+      state => ({ context, counter: state.counter + 1 }),
+      () => this.hideSplash()
+    )
   }
 
   onError = (error: Error) => {
